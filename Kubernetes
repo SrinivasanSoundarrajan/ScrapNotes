@@ -1,0 +1,31 @@
+1. ConfigMap 
+    -> Injects configuration to a container 
+    -> 1. Through volumes
+    -> 2. ENvironment variables 
+2. Ingress Controller (Load balancer internal?)
+    -> Allows inbound connections to the cluster
+    -> Alternative to LoadBalancer and nodePorts 
+       Flow: Internet -> Ingress controller -> Pod
+       Rule based redirection
+3. External DNS 
+4. Volumes 
+    Stateful 
+    Store data externally 
+    Persistent volume retains data even if container is stopped 
+    Volumes can also be created automatically. 
+5. Pod Presets
+    Injects ConfigMap and other presets to a collection of pods that matches a label
+    
+6. Stateful sets
+    Stable pod host name, by default pods get dynamic host names
+    Stable storage 
+7. Daemon sets
+    Ensures a pod is running in all nodes
+    WHen new node is added, a pod will be added automatically
+    API gateways like Linkerd uses daemon set to ensure it is runnign in all pods 
+8. Heapster is a resource monitoring tool
+    Heapster can be installed with InFluxDB(time series) and grafana 
+9.  Auto scaling 
+     Automatically checks every 30 mins using heapster and scale based on rules. 
+
+    
